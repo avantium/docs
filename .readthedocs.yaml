@@ -1,0 +1,20 @@
+# Avantium Project: Read the Docs Configuration File
+# For more details, refer to https://docs.readthedocs.io/en/stable/config-file/v2.html
+
+# Required version for the Read the Docs configuration file
+version: 2
+
+# Build settings: specify the tools and versions required for the build
+build:
+  os: "neutral"  # Neutral OS, no specific OS required
+  tools:
+    go: "latest"  # Use the latest Go version
+
+# Declare the Go dependencies required to build documentation or project-related tasks
+# This ensures a reproducible environment for building the docs with Go dependencies
+go:
+  install:
+    - requirements: docs/go_requirements.txt  # Un-comment and add Go dependencies if applicable
+
+# Optional: If there is a different documentation generator (e.g., Go-based tools), 
+# you could specify its configuration here.
